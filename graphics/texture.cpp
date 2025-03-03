@@ -35,8 +35,8 @@ std::shared_ptr<Texture> Texture::create_cube_map(const std::vector<std::string>
 
         texture->set_data(image->width(), image->height(), image->data(), 
             targets[i], 
-            Texture_format::RGBA, 
-            Texture_format::RGBA, 
+            Texture_format::RGBA,
+            Texture_format::SRGB_ALPHA, 
             Buffer_format::UNSIGNED_BYTE
         );
     }
@@ -55,7 +55,7 @@ std::shared_ptr<Texture> Texture::create_texture_from_path(const std::string& im
         return std::make_shared<Texture>(image->width(), image->height(), unit, image->data(), 
             Texture_type::TEXTURE_2D,
             Texture_format::RGBA,
-            Texture_format::RGBA,
+            Texture_format::SRGB_ALPHA, 
             Buffer_format::UNSIGNED_BYTE
         );
     }
@@ -68,7 +68,7 @@ std::shared_ptr<Texture> Texture::create_texture_from_path(const std::string& im
     auto texture = std::make_shared<Texture>(image->width(), image->height(), unit, image->data(),
             Texture_type::TEXTURE_2D,
             Texture_format::RGBA,
-            Texture_format::RGBA,
+            Texture_format::SRGB_ALPHA, 
             Buffer_format::UNSIGNED_BYTE
         );
 
@@ -85,7 +85,7 @@ std::shared_ptr<Texture> Texture::create_texture_from_memory(unsigned char* data
         return std::make_shared<Texture>(image->width(), image->height(), unit, image->data(), 
             Texture_type::TEXTURE_2D,
             Texture_format::RGBA,
-            Texture_format::RGBA,
+            Texture_format::SRGB_ALPHA, 
             Buffer_format::UNSIGNED_BYTE
         );
     }
@@ -98,7 +98,7 @@ std::shared_ptr<Texture> Texture::create_texture_from_memory(unsigned char* data
     auto texture = std::make_shared<Texture>(image->width(), image->height(), unit, image->data(), 
         Texture_type::TEXTURE_2D,
         Texture_format::RGBA,
-        Texture_format::RGBA,
+        Texture_format::SRGB_ALPHA, 
         Buffer_format::UNSIGNED_BYTE
     );
 

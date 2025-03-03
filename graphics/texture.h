@@ -62,6 +62,7 @@ public:
         RGBA,
         DEPTH_STENCIL,
         DEPTH_STENCIL_24_8,
+        SRGB_ALPHA,
     };
 
     enum class Filter {
@@ -87,6 +88,8 @@ public:
                 return GL_DEPTH_STENCIL;
             case Texture_format::DEPTH_STENCIL_24_8:
                 return GL_DEPTH24_STENCIL8;
+            case Texture_format::SRGB_ALPHA:
+                return GL_SRGB_ALPHA;
         }
     }
 

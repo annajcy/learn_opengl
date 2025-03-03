@@ -108,7 +108,7 @@ void prepare_lights() {
 	directional_light->intensity() = 0.5f;
 
 	auto ambient_light = std::make_shared<Ambient_light>();
-	ambient_light->intensity() = 0.25f;
+	ambient_light->intensity() = 0.15f;
 	
 	auto spot_light = std::make_shared<Spot_light>();
 	spot_light->position() = glm::vec3(0.0f, 0.0f, 2.0f);
